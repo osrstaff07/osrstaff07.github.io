@@ -10,7 +10,36 @@
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="index.html" aria-label="OSR SEO Solutions home"><span class="brand-mark" aria-hidden="true">O<span>S</span>R</span><span class="brand-name">OSR <span>SEO SOLUTIONS</span></span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span><span></span></button>
-    <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a class="active" href="services.html">Services</a><a href="inventory.html">Inventory</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="button button-small" href="contact.html">Let’s talk <span aria-hidden="true">↗</span></a></nav>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <details class="nav-dropdown-group is-active">
+        <summary class="nav-dropdown-trigger">SEO Services <span class="nav-chevron" aria-hidden="true"></span></summary>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-label">SEO SERVICES</span>
+          <a class="active" href="services.html" aria-current="page">All SEO services <span>↗</span></a>
+          <a href="on-page-seo.html">On-page SEO <span>↗</span></a>
+          <a href="technical-seo.html">Technical SEO <span>↗</span></a>
+          <a href="off-page-seo.html">Off-page SEO <span>↗</span></a>
+          <a href="services.html#local-seo">Local SEO <span>↗</span></a>
+        </div>
+      </details>
+      <details class="nav-dropdown-group">
+        <summary class="nav-dropdown-trigger">Service inventory <span class="nav-chevron" aria-hidden="true"></span></summary>
+        <div class="nav-dropdown nav-dropdown-wide">
+          <span class="nav-dropdown-label">BROWSE PACKAGES</span>
+          <a href="inventory.html">All services <span>↗</span></a>
+          <a href="inventory.html?category=pbn">PBN Links <span>↗</span></a>
+          <a href="inventory.html?category=edu">.EDU BackLinks <span>↗</span></a>
+          <a href="inventory.html?category=casino">Casino Niche PBN Links <span>↗</span></a>
+          <a href="inventory.html?category=diversification">Diversification BackLinks <span>↗</span></a>
+          <a href="inventory.html?category=expired">Expired Domains <span>↗</span></a>
+          <a href="inventory.html?category=local">Local SEO <span>↗</span></a>
+          <a href="inventory.html?category=reviews">Buy Reviews / ORM <span>↗</span></a>
+        </div>
+      </details>
+      <a class="nav-link" href="about.html">About</a><a class="nav-link" href="contact.html">Contact</a>
+      <a class="button button-small nav-cta" href="contact.html">Let’s talk <span aria-hidden="true">↗</span></a>
+    </nav>
   </div></header>
   <main id="main">
     <section class="page-hero"><div class="container page-hero-inner"><p class="eyebrow"><span class="eyebrow-dot"></span> What we do</p><h1>SEO services that work <span>together.</span></h1><p>From your site’s foundations to the content your customers need, bring the right parts of SEO together in one considered plan.</p><div class="breadcrumbs"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Services</span></div></div></section>
@@ -21,9 +50,9 @@
         <a class="service-card" href="on-page-seo.html"><span class="card-icon icon-content" aria-hidden="true">✳</span><span class="card-number">01</span><h3>On-page SEO</h3><p>Improve page content, search intent and internal linking to make your site more relevant and easier to navigate.</p><span class="card-link">Explore on-page SEO <b aria-hidden="true">↗</b></span></a>
         <a class="service-card" href="technical-seo.html"><span class="card-icon icon-technical" aria-hidden="true">⌘</span><span class="card-number">02</span><h3>Technical SEO</h3><p>Address crawling, indexing, site structure and performance so search engines can access your content.</p><span class="card-link">Explore technical SEO <b aria-hidden="true">↗</b></span></a>
         <a class="service-card" href="off-page-seo.html"><span class="card-icon icon-authority" aria-hidden="true">↗</span><span class="card-number">03</span><h3>Off-page SEO</h3><p>Build a stronger online reputation through relevant, earned links and a careful approach to authority.</p><span class="card-link">Explore off-page SEO <b aria-hidden="true">↗</b></span></a>
-        <article class="service-card"><span class="card-icon icon-research" aria-hidden="true">⌕</span><span class="card-number">04</span><h3>SEO audits</h3><p>Get a structured view of your website’s search opportunities, technical issues and recommended priorities.</p><a class="card-link" href="contact.html">Discuss an SEO audit <b aria-hidden="true">↗</b></a></article>
-        <article class="service-card"><span class="card-icon icon-content" aria-hidden="true">✎</span><span class="card-number">05</span><h3>Keyword &amp; content strategy</h3><p>Understand what your audience is searching for and plan useful pages around real needs and intent.</p><a class="card-link" href="contact.html">Plan your content <b aria-hidden="true">↗</b></a></article>
-        <article class="service-card"><span class="card-icon icon-local" aria-hidden="true">◎</span><span class="card-number">06</span><h3>Local SEO</h3><p>Strengthen your local search presence with accurate business information and location-focused content.</p><a class="card-link" href="contact.html">Explore local SEO <b aria-hidden="true">↗</b></a></article>
+        <article class="service-card" id="seo-audits"><span class="card-icon icon-research" aria-hidden="true">⌕</span><span class="card-number">04</span><h3>SEO audits</h3><p>Get a structured view of your website’s search opportunities, technical issues and recommended priorities.</p><a class="card-link" href="contact.html">Discuss an SEO audit <b aria-hidden="true">↗</b></a></article>
+        <article class="service-card" id="content-strategy"><span class="card-icon icon-content" aria-hidden="true">✎</span><span class="card-number">05</span><h3>Keyword &amp; content strategy</h3><p>Understand what your audience is searching for and plan useful pages around real needs and intent.</p><a class="card-link" href="contact.html">Plan your content <b aria-hidden="true">↗</b></a></article>
+        <article class="service-card" id="local-seo"><span class="card-icon icon-local" aria-hidden="true">◎</span><span class="card-number">06</span><h3>Local SEO</h3><p>Strengthen your local search presence with accurate business information and location-focused content.</p><a class="card-link" href="contact.html">Explore local SEO <b aria-hidden="true">↗</b></a></article>
       </div>
     </div></section>
     <section class="section section-tint"><div class="container split-section split-reverse"><div class="split-copy"><p class="eyebrow">A joined-up approach</p><h2>Better results begin with <span>the right priorities.</span></h2><p>SEO is more than a checklist. We look at how your content, technical setup and wider reputation support each other, then recommend a practical order of work.</p><ul class="check-list"><li><span>✓</span> Understand your audience and search landscape</li><li><span>✓</span> Prioritize opportunities against your goals</li><li><span>✓</span> Keep recommendations clear and actionable</li></ul><a class="button button-outline" href="contact.html">Find your starting point <span aria-hidden="true">↗</span></a></div><div class="split-visual"><div class="strategy-card"><span class="mini-label">SEO, connected</span><div class="strategy-line"><span class="strategy-badge">A</span><span><strong>Relevant content</strong><small>Pages that answer real questions.</small></span></div><div class="strategy-connector"></div><div class="strategy-line"><span class="strategy-badge">B</span><span><strong>Search-ready site</strong><small>A clear, accessible structure.</small></span></div><div class="strategy-connector"></div><div class="strategy-line"><span class="strategy-badge">C</span><span><strong>Trusted presence</strong><small>Authority earned over time.</small></span></div><div class="strategy-bottom"><span aria-hidden="true">✦</span> One strategy, working together</div></div><div class="visual-decoration" aria-hidden="true"></div></div></div></section>

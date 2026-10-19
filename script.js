@@ -2,14 +2,52 @@ const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 
 if (menuToggle && siteNav) {
+  const navDropdowns = Array.from(siteNav.querySelectorAll(".nav-dropdown-group"));
+
   menuToggle.addEventListener("click", () => {
     const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
     menuToggle.setAttribute("aria-expanded", String(!isOpen));
     siteNav.classList.toggle("is-open", !isOpen);
+    if (isOpen) {
+      navDropdowns.forEach((dropdown) => {
+        dropdown.open = false;
+      });
+    }
   });
 
   siteNav.addEventListener("click", (event) => {
     if (event.target instanceof Element && event.target.closest("a")) {
+      menuToggle.setAttribute("aria-expanded", "false");
+      siteNav.classList.remove("is-open");
+      navDropdowns.forEach((dropdown) => {
+        dropdown.open = false;
+      });
+    }
+  });
+
+  navDropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("toggle", () => {
+      if (dropdown.open) {
+        navDropdowns.forEach((otherDropdown) => {
+          if (otherDropdown !== dropdown) otherDropdown.open = false;
+        });
+      }
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (event.target instanceof Node && !siteNav.contains(event.target)) {
+      navDropdowns.forEach((dropdown) => {
+        dropdown.open = false;
+      });
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      navDropdowns.forEach((dropdown) => {
+        dropdown.open = false;
+      });
       menuToggle.setAttribute("aria-expanded", "false");
       siteNav.classList.remove("is-open");
     }
@@ -54,7 +92,9 @@ if (inventoryGrid instanceof HTMLElement) {
   const emptyMessage = document.querySelector("[data-inventory-empty]");
   const cards = Array.from(inventoryGrid.querySelectorAll(".inventory-card"));
   const startingOrder = new Map(cards.map((card, index) => [card, index]));
-  let selectedCategory = "all";
+  const validCategories = new Set(["all", "pbn", "edu", "casino", "diversification", "expired", "local", "reviews"]);
+  const requestedCategory = new URLSearchParams(window.location.search).get("category");
+  let selectedCategory = validCategories.has(requestedCategory) ? requestedCategory : "all";
 
   const updateInventory = () => {
     const searchTerm = searchInput instanceof HTMLInputElement ? searchInput.value.trim().toLowerCase() : "";
@@ -118,6 +158,12 @@ if (inventoryGrid instanceof HTMLElement) {
     const category = count.getAttribute("data-filter-count");
     const total = cards.filter((card) => category === "all" || card.dataset.category === category).length;
     count.textContent = String(total);
+  });
+
+  document.querySelectorAll("[data-category-filter]").forEach((filter) => {
+    const isSelected = filter.getAttribute("data-category-filter") === selectedCategory;
+    filter.classList.toggle("is-selected", isSelected);
+    filter.setAttribute("aria-pressed", String(isSelected));
   });
 
   updateInventory();

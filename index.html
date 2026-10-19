@@ -20,12 +20,35 @@
         <span class="sr-only">Toggle navigation</span><span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a class="active" href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="inventory.html">Inventory</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a class="button button-small" href="contact.html">Let’s talk <span aria-hidden="true">↗</span></a>
+        <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+        <details class="nav-dropdown-group">
+          <summary class="nav-dropdown-trigger">SEO Services <span class="nav-chevron" aria-hidden="true"></span></summary>
+          <div class="nav-dropdown">
+            <span class="nav-dropdown-label">SEO SERVICES</span>
+            <a href="services.html">All SEO services <span>↗</span></a>
+            <a href="on-page-seo.html">On-page SEO <span>↗</span></a>
+            <a href="technical-seo.html">Technical SEO <span>↗</span></a>
+            <a href="off-page-seo.html">Off-page SEO <span>↗</span></a>
+            <a href="services.html#local-seo">Local SEO <span>↗</span></a>
+          </div>
+        </details>
+        <details class="nav-dropdown-group">
+          <summary class="nav-dropdown-trigger">Service inventory <span class="nav-chevron" aria-hidden="true"></span></summary>
+          <div class="nav-dropdown nav-dropdown-wide">
+            <span class="nav-dropdown-label">BROWSE PACKAGES</span>
+            <a href="inventory.html">All services <span>↗</span></a>
+            <a href="inventory.html?category=pbn">PBN Links <span>↗</span></a>
+            <a href="inventory.html?category=edu">.EDU BackLinks <span>↗</span></a>
+            <a href="inventory.html?category=casino">Casino Niche PBN Links <span>↗</span></a>
+            <a href="inventory.html?category=diversification">Diversification BackLinks <span>↗</span></a>
+            <a href="inventory.html?category=expired">Expired Domains <span>↗</span></a>
+            <a href="inventory.html?category=local">Local SEO <span>↗</span></a>
+            <a href="inventory.html?category=reviews">Buy Reviews / ORM <span>↗</span></a>
+          </div>
+        </details>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="button button-small nav-cta" href="contact.html">Let’s talk <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -56,7 +79,7 @@
           <div class="growth-card">
             <div class="growth-head"><span>ORGANIC VISIBILITY</span><span class="growth-period">A long-term view</span></div>
             <svg class="growth-chart" viewBox="0 0 260 104" role="img" aria-label="Illustrative rising search visibility graph">
-              <defs><linearGradient id="area-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#50d3ca" stop-opacity=".33"/><stop offset="1" stop-color="#50d3ca" stop-opacity="0"/></linearGradient></defs>
+              <defs><linearGradient id="area-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0093b8" stop-opacity=".33"/><stop offset="1" stop-color="#0093b8" stop-opacity="0"/></linearGradient></defs>
               <path class="chart-area" d="M0 85 C22 82 23 65 49 69 S76 78 96 56 S128 68 149 47 S178 52 194 31 S221 39 260 9 V104 H0Z"/>
               <path class="chart-line" d="M0 85 C22 82 23 65 49 69 S76 78 96 56 S128 68 149 47 S178 52 194 31 S221 39 260 9"/>
               <circle class="chart-point" cx="260" cy="9" r="4"/>
