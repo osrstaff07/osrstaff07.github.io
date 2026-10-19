@@ -1,4 +1,37 @@
 /* Shared visual refresh. Brand colors stay navy, teal, and white. */
+.expanded-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.expanded-card { display: flex; flex-direction: column; align-items: flex-start; padding: 36px; border: 1px solid rgb(5 46 84 / 10%); border-radius: 22px; background: #fff; }
+.expanded-card h2 { margin: 20px 0 14px; font-size: clamp(23px, 2.5vw, 30px); letter-spacing: -.035em; line-height: 1.25; }
+.expanded-card p { color: var(--muted); margin-bottom: 26px; }
+.expanded-card .text-link { margin-top: auto; }
+.journey-step { display: grid; grid-template-columns: 80px 1fr .65fr; gap: 36px; padding: 42px 0; border-bottom: 1px solid rgb(5 46 84 / 12%); }
+.journey-step:first-child { padding-top: 0; }
+.journey-number { color: var(--teal); font: 800 48px/1.2 "Manrope", sans-serif; letter-spacing: -.06em; }
+.journey-step h2 { font-size: 28px; letter-spacing: -.035em; }
+.journey-step p { color: var(--muted); margin-bottom: 0; }
+.journey-step aside { border-radius: 16px; background: rgb(0 147 184 / 6%); padding: 24px; font-size: 14px; }
+.journey-step aside strong { display: block; margin-bottom: 10px; }
+.expectation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.expectation-grid article { border-top: 2px solid var(--teal); padding-top: 24px; }
+.expectation-grid p { color: var(--muted); }
+.resource-checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.resource-checklist h2 { font-size: clamp(30px, 3.5vw, 44px); letter-spacing: -.045em; line-height: 1.2; }
+.resource-checklist ol { margin: 0; padding-left: 25px; }
+.resource-checklist li { padding: 0 0 20px 12px; }
+.resource-checklist li::marker { font-weight: 800; color: var(--teal); }
+@media (max-width: 1100px) and (min-width: 1051px) {
+  .header-inner { gap: 16px; }
+  .site-nav { gap: 12px; }
+  .site-nav > .nav-link, .site-header .nav-dropdown-trigger { font-size: 12px; }
+}
+@media (max-width: 760px) {
+  .expanded-grid, .expectation-grid, .resource-checklist { grid-template-columns: 1fr; gap: 22px; }
+  .expanded-card { padding: 26px; }
+  .journey-step { grid-template-columns: 52px 1fr; gap: 18px; padding-block: 30px; }
+  .journey-step aside { grid-column: 2; }
+  .journey-number { font-size: 36px; }
+  .journey-step h2 { font-size: 24px; }
+}
 :root {
   --shadow: 0 20px 60px rgb(5 46 84 / 8%);
   --line: rgb(5 46 84 / 10%);
