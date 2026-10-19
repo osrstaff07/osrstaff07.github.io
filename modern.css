@@ -57,7 +57,7 @@ body { text-wrap: pretty; }
 .site-header .brand-name,
 .site-header .brand-name > span { color: var(--navy); }
 .site-header .brand-name > span { color: var(--teal); }
-.site-nav > .nav-link,
+.site-header .site-nav > a.nav-link,
 .site-header .nav-dropdown-trigger { color: var(--navy); font-weight: 700; }
 .site-header .site-nav > .nav-link:hover,
 .site-header .site-nav > .nav-link.active,
